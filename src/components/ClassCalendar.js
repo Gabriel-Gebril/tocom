@@ -6,17 +6,6 @@ import "./ClassCalendar.css"
 
 const localizer = momentLocalizer(moment)
 const propTypes = {}
-// const ClassCalendar = props => (
-//   <div>
-//     <Calendar
-//       localizer={localizer}
-//       events={props.events}
-//       startAccessor="start"
-//       endAccessor="end"
-//       style={{ height: 500 }}
-//     />
-//   </div>
-// )
 
 function Event({ event }) {
   return (
@@ -83,5 +72,7 @@ class ClassCalendar extends React.Component {
     )
   }
 }
+
 ClassCalendar.propTypes = propTypes
+
 export default ClassCalendar;
