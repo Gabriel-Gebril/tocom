@@ -57,8 +57,7 @@ function App() {
   return (
     
     <BrowserRouter>
-    {/* <ClassCalendar onEventSave={onEventSave} events={events}/> */}
-      {/* <Settings notify={notify} toggleNotification={toggleNotification} keybinds={keybinds} onBindSave={onBindSave} nextkIndex={nextkIndex} updateIndex={updateIndex}></Settings> */}
+     
       <Switch>
         <Route path="/app">
           <AppLayout
@@ -80,6 +79,22 @@ function App() {
               addMessages={onMessageSave}
               messages={messages}
             />
+          )}
+        />
+        <Route
+          exact
+          path="/settings"
+          render={(props) => (
+            <Settings notify={notify} messages={messages} toggleNotification={toggleNotification} keybinds={keybinds} onBindSave={onBindSave} nextkIndex={nextkIndex} updateIndex={updateIndex}></Settings>
+
+          )}
+        />
+        <Route
+          exact
+          path="/calendar"
+          render={(props) => (
+            <ClassCalendar onEventSave={onEventSave} messages={messages} events={events}/>
+
           )}
         />
       </Switch>

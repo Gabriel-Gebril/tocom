@@ -12,6 +12,7 @@ import KeyboardIcon from "@material-ui/icons/Keyboard";
 import ChatDivider from "./ChatDivider";
 import SettingsIcon from "@material-ui/icons/Settings";
 import {withRouter} from 'react-router-dom';
+import EventIcon from '@material-ui/icons/Event';
 
 const drawerWidth = 340;
 
@@ -64,6 +65,12 @@ export class SideBar extends React.Component {
     if (index == 0) {
       this.props.history.push("/app/addAccount");
     }
+    if (index == 1) {
+      this.props.history.push("/settings");
+    }
+    if (index == 2) {
+      this.props.history.push("/calendar");
+    }
   };
 
   render() {
@@ -109,9 +116,9 @@ export class SideBar extends React.Component {
             onClick={(event) => this.handleListItemClick(event, 2)}
           >
             <ListItemIcon>
-              <KeyboardIcon />
+              <EventIcon />
             </ListItemIcon>
-            <ListItemText primary="Keybindings" />
+            <ListItemText primary="Calendar" />
           </ListItem>
         </List>
       </Drawer>

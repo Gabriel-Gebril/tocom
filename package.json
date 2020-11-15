@@ -12,7 +12,6 @@
     "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-big-calendar": "^0.28.6",
-
     "react-chatbox-component": "0.0.5",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",

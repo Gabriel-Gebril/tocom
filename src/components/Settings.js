@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SideBar from "../components/SideBar";
 import { useEffect, useState } from 'react';
 import './Settings.css'
-
+import TopBar from "../components/TopBar";
 function KeybindSetting(props){
     const [checked, setChecked] = useState(false);
     const [currSeq, updateSeq] = useState(props.seq);
@@ -79,18 +80,23 @@ function Settings(props) {
 
 
     return(
-        <div>
-            <h3 style={{float: "left"}}>Notifications:</h3> 
-            <br></br><br></br>
-            <p style={{float: "left"}}>Enable Notifications?</p> <label class="switch" style={{float: "left", marginLeft: "405px"}}><input value={props.notify} checked={props.notify} onChange={()=> props.toggleNotification(!props.notify)}  style={{float: "left"}} type="checkbox"/><span style={{float: "left"}} class="slider round"></span></label>
-            <br></br><br></br>
-            <hr></hr>
-            <h3 style={{float: "left"}}>Keybinds:</h3>  
-            <button style={{float: "left", marginLeft: "455px"}} type="button" class="btn btn-success" onClick = {addKeybind}>+</button> 
-            <br></br><br></br>
-            <div style={{float: "left"}}> {props.keybinds.map(e => <KeybindSetting keybinds={props.keybinds} onDelete={onDelete} onBindSave={props.onBindSave} index={e.id} seq={e.keybind} action={e.action}/>)}</div>
-            <br></br><br></br>
-            <hr></hr>
+        <div style={{backgroundColor: "#fafafa", height: "10000px"}}>
+            <TopBar></TopBar>
+            <SideBar messages={props.messages} />
+            <div style={{marginLeft: "345px"}}>
+                <h3 style={{float: "left"}}>Notifications:</h3> 
+                <br></br><br></br>
+                <p style={{float: "left"}}>Enable Notifications?</p> <label class="switch" style={{float: "left", marginLeft: "405px"}}><input value={props.notify} checked={props.notify} onChange={()=> props.toggleNotification(!props.notify)}  style={{float: "left"}} type="checkbox"/><span style={{float: "left"}} class="slider round"></span></label>
+                <br></br><br></br>
+                <hr></hr>
+                <h3 style={{float: "left"}}>Keybinds:</h3>  
+                <button style={{float: "left", marginLeft: "455px"}} type="button" class="btn btn-success" onClick = {addKeybind}>+</button> 
+                <br></br><br></br>
+                <div style={{float: "left"}}> {props.keybinds.map(e => <KeybindSetting keybinds={props.keybinds} onDelete={onDelete} onBindSave={props.onBindSave} index={e.id} seq={e.keybind} action={e.action}/>)}</div>
+                <br></br><br></br>
+                <hr></hr>
+            </div>
+            
         </div>
     )
 }

@@ -3,7 +3,8 @@ import { Calendar, momentLocalizer, Views } from 'react-big-calendar'
 import moment from 'moment'
 import "react-big-calendar/lib/css/react-big-calendar.css"
 import "./ClassCalendar.css"
-
+import SideBar from "../components/SideBar";
+import TopBar from "../components/TopBar";
 const localizer = momentLocalizer(moment)
 const propTypes = {}
 
@@ -49,6 +50,8 @@ class ClassCalendar extends React.Component {
   render() {
     return (
       <div>
+        <TopBar></TopBar>
+        <SideBar messages={this.props.messages} />
         <Calendar
           selectable
           localizer={localizer}
@@ -58,7 +61,7 @@ class ClassCalendar extends React.Component {
           defaultView={Views.WEEK}
           onSelectEvent={event => alert(event.title + " : " + event.link)}
           onSelectSlot={this.handleSelect}
-          style={{ height: 500 }}
+          style={{ height: 500, marginLeft: 340 }}
           scrollToTime
           components={{
             event: Event,
