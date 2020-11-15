@@ -11,6 +11,8 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import ClassCalendar from "./components/ClassCalendar";
 import Settings from "./components/Settings"
 import './App.css';
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
 
 // Warn if overriding existing method
 if(Array.prototype.equals)
@@ -127,6 +129,7 @@ function App() {
   return (
     
     <BrowserRouter>
+    {notify? <ReactNotification /> : ""}  
       <Switch>
         <Route path="/app">
           <AppLayout
