@@ -7,7 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import Chat from "../components/Chat";
 import "../App.css";
 import SearchPage from "../components/SearchPage";
-
+import { store } from 'react-notifications-component';
 const sidebarWidth = 300;
 
 const useStyles = (theme) => ({
@@ -76,8 +76,30 @@ class AppLayout extends React.Component {
 
         discordChats[chatId - 1].messages = [
           ...discordChats[chatId - 1].messages,
-          newMessage,
+          newMessage,{
+            "text": "This is an automated response",
+            "id": newMessage.id + 1,
+            "sender": {
+                "name": "CS50 Bot",
+                "uid": "cs50bot_discord",
+                "avatar": "/images/bot.jpg"
+            }
+        }
         ];
+
+        store.addNotification({
+          title: "CS50 Bot has sent you a message on discord!",
+          message: "This is an automated response",
+          type: "success",
+          insert: "bottom",
+          container: "bottom-right",
+          animationIn: ["animate__animated", "animate__fadeIn"],
+          animationOut: ["animate__animated", "animate__fadeOut"],
+          dismiss: {
+            duration: 5000,
+            onScreen: true
+          }
+        });
 
         discord = {
           chats: discordChats,
