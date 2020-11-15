@@ -1,13 +1,10 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import { fade, withStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
-import Link from "@material-ui/core/Link";
 import { withRouter } from 'react-router-dom';
 
 const useStyles = (theme) => ({
@@ -66,6 +63,29 @@ const useStyles = (theme) => ({
 });
 
 class TopBar extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      searchField: ''
+    };
+
+    this.onSearch = this.onSearch.bind(this);
+  }
+
+  onSearch(event) {
+    event.preventDefault();
+
+    var query = encodeURI(this.state.searchField);
+
+    this.setState({
+      searchField: ''
+    });
+
+    this.props.history.push('/app/search?query=' + query);
+  }
+
   render() {
     const { classes } = this.props;
 
@@ -77,6 +97,7 @@ class TopBar extends React.Component {
                 Tocom Interactive Prototype
               </Typography>
 
+            <form onSubmit={this.onSearch}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
@@ -88,8 +109,12 @@ class TopBar extends React.Component {
                   input: classes.inputInput,
                 }}
                 inputProps={{ "aria-label": "search" }}
+                value={this.state.searchField}
+                onChange={(event) => this.setState({searchField: event.target.value})}
               />
             </div>
+            </form>
+
           </Toolbar>
         </AppBar>
       </div>

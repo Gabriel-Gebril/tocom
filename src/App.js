@@ -3,9 +3,6 @@ import "./App.css";
 import SimulatedLoginPage from "./components/SimulatedLoginPage";
 import AppLayout from "./layouts/AppLayout";
 import "react-chatbox-component/dist/style.css";
-import { ChatBox } from "react-chatbox-component";
-import { getCs50Messages, getSophiaMessages } from "./data/MessageData";
-import NoChats from "./components/NoChats";
 import { BrowserRouter } from "react-router-dom";
 import { Redirect, Route, Switch } from "react-router-dom";
 import ClassCalendar from "./components/ClassCalendar";
@@ -59,6 +56,7 @@ function App() {
     <BrowserRouter>
      
       <Switch>
+        <Route exact path="/"><Redirect to="/app" /></Route>
         <Route path="/app">
           <AppLayout
             logins={logins}

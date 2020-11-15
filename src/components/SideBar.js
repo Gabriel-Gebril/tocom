@@ -1,6 +1,5 @@
 import React from "react";
 import { withStyles } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
@@ -8,7 +7,6 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import AddIcon from '@material-ui/icons/Add';
-import KeyboardIcon from "@material-ui/icons/Keyboard";
 import ChatDivider from "./ChatDivider";
 import SettingsIcon from "@material-ui/icons/Settings";
 import {withRouter} from 'react-router-dom';
@@ -62,13 +60,13 @@ export class SideBar extends React.Component {
   handleListItemClick = (event, index) => {
     this.setState({ selectedIndex: index });
 
-    if (index == 0) {
+    if (index === 0) {
       this.props.history.push("/app/addAccount");
     }
-    if (index == 1) {
+    if (index === 1) {
       this.props.history.push("/settings");
     }
-    if (index == 2) {
+    if (index === 2) {
       this.props.history.push("/calendar");
     }
   };
