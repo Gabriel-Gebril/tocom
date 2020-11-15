@@ -8,7 +8,6 @@ import { getCs50Messages, getSophiaMessages } from "./data/MessageData";
 import NoChats from "./components/NoChats";
 import { BrowserRouter } from "react-router-dom";
 import { Redirect, Route, Switch } from "react-router-dom";
-import { useState } from 'react';
 import ClassCalendar from "./components/ClassCalendar";
 import Settings from "./components/Settings"
 import './App.css';
@@ -56,7 +55,10 @@ function App() {
   });
 
   return (
+    
     <BrowserRouter>
+    {/* <ClassCalendar onEventSave={onEventSave} events={events}/> */}
+      {/* <Settings notify={notify} toggleNotification={toggleNotification} keybinds={keybinds} onBindSave={onBindSave} nextkIndex={nextkIndex} updateIndex={updateIndex}></Settings> */}
       <Switch>
         <Route path="/app">
           <AppLayout
@@ -82,8 +84,7 @@ function App() {
         />
       </Switch>
     </BrowserRouter>
-      {/* <ClassCalendar onEventSave={onEventSave} events={events}/> */}
-      {/* <Settings notify={notify} toggleNotification={toggleNotification} keybinds={keybinds} onBindSave={onBindSave} nextkIndex={nextkIndex} updateIndex={updateIndex}></Settings> */}
+      
   );
 }
 
