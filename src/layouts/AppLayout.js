@@ -3,9 +3,10 @@ import { CssBaseline, withStyles } from "@material-ui/core";
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
 import NoChats from "../components/NoChats";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Chat from "../components/Chat";
-import SimulatedLoginPage from "../components/SimulatedLoginPage";
+import "../App.css";
+import SearchPage from "../components/SearchPage";
 
 const sidebarWidth = 300;
 
@@ -145,6 +146,12 @@ class AppLayout extends React.Component {
                       this.props
                     )}
                   />
+                )}
+              />
+              <Route
+                path="/app/search"
+                render={(props) => (
+                  <SearchPage {...props} messages={this.props.messages} />
                 )}
               />
             </Switch>
