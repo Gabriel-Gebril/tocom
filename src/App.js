@@ -51,8 +51,14 @@ function App() {
       "id": 0,
       "action": "unassigned",
       "keybind": [
-        "a",
-        "s"
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
       ]
     }]
     );
