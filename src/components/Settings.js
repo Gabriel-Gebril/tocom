@@ -10,8 +10,10 @@ function KeybindSetting(props){
     const handleKeyDown = (event) => {
 
         if (!event.repeat){
-            //
-            updateSeq([...currSeq,event.key.toLowerCase()])
+            if (event.keyCode === 32){
+                updateSeq(["", "", "", "", "", "", ""]);
+            }else{updateSeq([...currSeq,event.key.toLowerCase()])}
+            
         }
     };
     const handleKeyUp = (event) => {
@@ -58,7 +60,7 @@ function KeybindSetting(props){
             </select>
             
             <label for="keybind">Keybind:</label>
-            <input name="keybind" readOnly value={currSeq.join(" + ")} type="text"/>
+            <input name="keybind" readOnly value={currSeq.length > 6 ? "" : currSeq.join(" + ")} type="text"/>
             <button  type="button" onClick={() => {checked ? console.log(""): updateSeq([]);setChecked(!checked)}} className={checked ? "btn btn-danger":"btn btn-primary"}>Record</button>
             <button  type="button" onClick={() => props.onDelete(props.index)} className={"btn btn-danger"}>🗑️</button>
             <br></br><br></br>
@@ -73,7 +75,7 @@ function Settings(props) {
     }
 
     let addKeybind = () => {
-        props.onBindSave([...props.keybinds, { id: props.nextkIndex, action: "unassigned", keybind: [] }]);
+        props.onBindSave([...props.keybinds, { id: props.nextkIndex, action: "unassigned", keybind: ["", "", "", "", "", "", ""] }]);
         props.updateIndex(props.nextkIndex + 1);
     }
 
@@ -92,9 +94,11 @@ function Settings(props) {
                 <h3 style={{float: "left"}}>Keybinds:</h3>  
                 <button style={{float: "left", marginLeft: "455px"}} type="button" class="btn btn-success" onClick = {addKeybind}>+</button> 
                 <br></br><br></br>
+                <p style={{float: "left"}}>Use spacebar to clear your keybind while recording if you make a mistake.</p>
+                <br></br><br></br>
                 <div style={{float: "left"}}> {props.keybinds.map(e => <KeybindSetting keybinds={props.keybinds} onDelete={onDelete} onBindSave={props.onBindSave} index={e.id} seq={e.keybind} action={e.action}/>)}</div>
                 <br></br><br></br>
-                <hr></hr>
+            
             </div>
             
         </div>
