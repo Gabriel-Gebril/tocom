@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.chat-box, .rbc-calendar { 
+  height: calc(100vh - 72px) !important;
+}
+
+.msg-page {
+  height: calc(100vh - (64px + 60px)) !important;
+}

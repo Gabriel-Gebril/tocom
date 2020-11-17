@@ -15,6 +15,9 @@ const useStyles = (theme) => ({
     display: "flex",
   },
   toolbar: theme.mixins.toolbar,
+  toolbar: {
+    minHeight: 'calc(100vh - 64px)'
+  },
   content: {
     marginLeft: 340,
   },
