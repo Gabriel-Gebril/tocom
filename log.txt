@@ -1,0 +1,179 @@
+commit ebd3a41dbdfb97d5c08d884331866f961e4891a5
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Mon Nov 16 17:55:28 2020 -0500
+
+    Changed the example keybind to a blank.
+
+commit 8585ddaf24b8a438eaa1ca19d14d397f7f07c569
+Merge: d64ef4b b0ea77d
+Author: Nathan Brown <13461008+coffeexcode@users.noreply.github.com>
+Date:   Mon Nov 16 11:53:54 2020 -0500
+
+    Merge pull request #7 from Gabriel-Gebril/search
+    
+    Merge pull request #6 from Gabriel-Gebril/main
+
+commit b0ea77dfa42f66fbf0dcb4069d0b1ad70cf11258
+Merge: 9c5addb d64ef4b
+Author: Nathan Brown <13461008+coffeexcode@users.noreply.github.com>
+Date:   Mon Nov 16 11:34:19 2020 -0500
+
+    Merge pull request #6 from Gabriel-Gebril/main
+    
+    Merge main into search
+
+commit d64ef4be58d79baaa1644ee379370ef26faf799c
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 19:15:59 2020 -0500
+
+    fixed bug where adding a new keybind triggered the action every tick.
+
+commit dc429bca3952332a0bc57ba0cc2cdf06d01360a8
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 18:40:52 2020 -0500
+
+    notifications add
+
+commit 684f4af3b827ccaa79022a02eb86bb14ed124f6e
+Merge: 7193483 867d36c
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 18:25:25 2020 -0500
+
+    Merge branch 'main' of github.com:Gabriel-Gebril/tocom into main
+
+commit 7193483ee4b9a157439eabfd18bbae0b142c241b
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 18:24:46 2020 -0500
+
+    Init notifications
+
+commit 867d36cb714b96d591b8d0d68e76030a472fe792
+Merge: 5cf5a87 9c5addb
+Author: Gabriel Gebril <Gebril.Gabriel@gmail.com>
+Date:   Sun Nov 15 15:24:13 2020 -0800
+
+    Merge pull request #5 from Gabriel-Gebril/search
+    
+    Added search functionality
+
+commit 5cf5a8737749baf683efc60c591bdc7751de2190
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 17:52:06 2020 -0500
+
+    keybinds now do things.
+
+commit 9c5addb5bd2879fc48126b80ae353283350771c8
+Author: Nate Brown <beebop.brown95@gmail.com>
+Date:   Sun Nov 15 15:43:36 2020 -0500
+
+    Added search functionality
+
+commit a2af8aca711adb0cfd8adc31685732425bb54db7
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 08:02:13 2020 -0500
+
+    connected all major components together. TODO: keybinds need to actually do something. Simulated response + simulated notification.
+
+commit 5557317eb27ea94712cee2537111e5842a49d8ea
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 06:42:31 2020 -0500
+
+    fixed bugs introduced from merge conflicts
+
+commit df8effad27322415abab1e5f5631ad68e5568401
+Merge: d660652 515f214
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 06:42:11 2020 -0500
+
+    dugbug
+
+commit d660652c75804ab1cd14e26a80a92731b2a01e52
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 06:37:19 2020 -0500
+
+    dugbug
+
+commit 515f2140dd3d6376c1ea8effde7dccb4a2925869
+Merge: 6b8143d 79621fd
+Author: Gabriel Gebril <Gebril.Gabriel@gmail.com>
+Date:   Sun Nov 15 03:35:09 2020 -0800
+
+    Merge pull request #4 from Gabriel-Gebril/layout_and_chat
+    
+    Created app layout and chat functionality, merge conflicts resolved
+
+commit 79621fdaf50bf0d4a5291f3bc14712109b82030d
+Merge: 5bb9436 6b8143d
+Author: Gabriel Gebril <Gebril.Gabriel@gmail.com>
+Date:   Sun Nov 15 03:34:46 2020 -0800
+
+    Merge branch 'main' into layout_and_chat
+
+commit 6b8143d6d0b9c1d877ad985031ba9982b1ae64da
+Merge: 26b6b47 4cf0577
+Author: Gabriel Gebril <Gebril.Gabriel@gmail.com>
+Date:   Sun Nov 15 03:28:33 2020 -0800
+
+    Merge pull request #3 from Gabriel-Gebril/settings
+    
+    Settings
+
+commit 4cf057705e1c55d3001d35d0238218884ea6b6fe
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sun Nov 15 06:28:05 2020 -0500
+
+    Settings Menu finished. Added a single piece of state needed for keybinds to get an index for each new keybind added.
+
+commit 5bb9436b7b268356d4fb6275194e75a4663d7873
+Author: Nate Brown <beebop.brown95@gmail.com>
+Date:   Sat Nov 14 20:29:33 2020 -0500
+
+    Created app layout and chat functionality
+
+commit 62f794e4ebc012b87e17ca0dc303700068390536
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Sat Nov 14 10:22:41 2020 -0500
+
+    Keybind management functionality added.
+
+commit 26b6b47015d8be754c532ed65308e429871dcdfa
+Merge: fc84b0c cdf8520
+Author: Gabriel Gebril <Gebril.Gabriel@gmail.com>
+Date:   Sat Nov 14 02:05:08 2020 -0800
+
+    Merge pull request #2 from Gabriel-Gebril/calendar
+    
+    Calendar MVP complete. Can select a timeslot, name the event and put …
+
+commit cdf8520eefec2a58788655b380aeef7151b08f83
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Fri Nov 13 21:18:25 2020 -0500
+
+    Calendar MVP complete. Can select a timeslot, name the event and put a link for the class in question. Recurrence scraped, select platform scraped because redundant you already post a link for the class.
+
+commit fc84b0c842a93efe56cf1eddfd3d4adcf6543a77
+Merge: 8a99b97 a080d72
+Author: Gabriel Gebril <Gebril.Gabriel@gmail.com>
+Date:   Fri Nov 13 02:23:10 2020 -0800
+
+    Merge pull request #1 from Gabriel-Gebril/calendar
+    
+    Declared state variables that will be shared between developers. Spun…
+
+commit a080d727075771d895d5c3b6d7ff7e931abe8d8e
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Fri Nov 13 05:22:17 2020 -0500
+
+    Declared state variables that will be shared between developers. Spun up a stub calendar to illustrate the concept.
+
+commit 8a99b9740ddc4a4647670521b2eb97aa5bb6166f
+Author: Gabriel Gebril <gebril.gabriel@gmail.com>
+Date:   Thu Nov 12 20:59:13 2020 -0500
+
+    Init with create react app
+
+commit 80bee5b0e30318882ebb25016e57325f8e2b3a81
+Author: Gabriel Gebril <Gebril.Gabriel@gmail.com>
+Date:   Thu Nov 12 20:20:49 2020 -0500
+
+    Initial commit
