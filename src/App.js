@@ -134,7 +134,7 @@ function App() {
     <BrowserRouter>
     {notify? <ReactNotification /> : ""}  
       <Switch>
-        <Route exact path="/"><Redirect to="/app" /></Route>
+        <Route exact path="/tocom"><Redirect to="/app" /></Route>
         <Route path="/app">
           <AppLayout
             logins={logins}

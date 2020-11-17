@@ -44,7 +44,7 @@ class NoChats extends React.Component {
           {!this.props.logins.discord && (
             <div className={classes.type}>
               <div className={classes.typeLogo}>
-                <img className={classes.logo} src="/images/discord_icon.png" />
+                <img className={classes.logo} src="/tocom/images/discord_icon.png" />
               </div>
               <Button variant="outlined" color="primary" component={Link} to="/external/connectAccount/discord">
                 Add Discord Account
@@ -54,7 +54,7 @@ class NoChats extends React.Component {
           {!this.props.logins.teams && (
             <div className={classes.type}>
               <div className={classes.typeLogo}>
-                <img className={classes.logo} src="/images/teams_icon.png" />
+                <img className={classes.logo} src="/tocom/images/teams_icon.png" />
               </div>
               <Button variant="outlined" color="primary" component={Link} to="/external/connectAccount/teams">
                 Add Teams Account
@@ -64,7 +64,7 @@ class NoChats extends React.Component {
           {!this.props.logins.zoom && (
             <div className={classes.type}>
               <div className={classes.typeLogo}>
-                <img className={classes.logo} src="/images/zoom_icon.png" />
+                <img className={classes.logo} src="/tocom/images/zoom_icon.png" />
               </div>
               <Button variant="outlined" color="primary" component={Link} to="/external/connectAccount/zoom">
                 Add Zoom Account

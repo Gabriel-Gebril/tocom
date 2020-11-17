@@ -82,7 +82,7 @@ class AppLayout extends React.Component {
             "sender": {
                 "name": "CS50 Bot",
                 "uid": "cs50bot_discord",
-                "avatar": "/images/bot.jpg"
+                "avatar": "/tocom/images/bot.jpg"
             }
         }
         ];

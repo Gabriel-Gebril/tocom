@@ -6,7 +6,7 @@ export function getMyFirstChatMessages(platform) {
             "sender": {
                 "name": "Terry Crews",
                 "uid": "terrycrews_" + platform,
-                "avatar": "/images/terry.jpg"
+                "avatar": "/tocom/images/terry.jpg"
             }
         },
     ]
@@ -20,7 +20,7 @@ export function getCs50Messages(platform) {
             "sender": {
                 "name": "CS50 Bot",
                 "uid": "cs50bot_" + platform,
-                "avatar": "/images/bot.jpg"
+                "avatar": "/tocom/images/bot.jpg"
             }
         },
         {
@@ -29,7 +29,7 @@ export function getCs50Messages(platform) {
             "sender": {
                 "name": "Mark J.",
                 "uid": "markj_" + platform,
-                "avatar": "/images/mark.jpg"
+                "avatar": "/tocom/images/mark.jpg"
             }
         },
     ]
@@ -43,7 +43,7 @@ export function getSophiaMessages(platform) {
             "sender": {
                 "name": "Sophia",
                 "uid": "sophia_" + platform,
-                "avatar": "/images/sophia.jpg"
+                "avatar": "/tocom/images/sophia.jpg"
             }
         },
         {
@@ -61,7 +61,7 @@ export function getSophiaMessages(platform) {
             "sender": {
                 "name": "Sophia",
                 "uid": "sophia_" + platform,
-                "avatar": "/images/sophia.jpg"
+                "avatar": "/tocom/images/sophia.jpg"
             }
         },
     ]

@@ -168,11 +168,11 @@ class SimulatedLoginPage extends React.Component {
 
   getLogo(type) {
     if (type === "discord") {
-      return "/images/discord.png";
+      return "/tocom/images/discord.png";
     } else if (type === "teams") {
-      return "/images/teams.png";
+      return "/tocom/images/teams.png";
     } else if (type === "zoom") {
-      return "/images/zoom.png";
+      return "/tocom/images/zoom.png";
     } else return "";
   }
 
